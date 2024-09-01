@@ -1,0 +1,145 @@
+body {
+  padding: 0;
+  margin: 0;
+  transition: background 0.3s;
+  transition-delay: 0.2s;
+}
+body.home-selected, body.home-selected nav:before  {
+  background: #2a622b;
+}
+body.portfolio-selected, body.portfolio-selected nav:before {
+  background: #375b88;
+}
+body.contact-selected, body.contact-selected nav:before {
+  background: #5b1d1d;
+}
+nav {
+  background: #fff;
+  padding: 15px 20px;
+  position: fixed;
+  bottom: 10px;
+  width: calc(100% - 80px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 8px 8px 25px 25px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-evenly;
+}
+nav.clicked:after {
+  animation: iconchange 1s forwards;
+}
+nav a {
+  width: 40px;
+  text-align: center;
+  color: #1f3a77;
+  font-size: 20px; 
+}
+nav a i {
+  transition: all 0.1s;
+  transition-delay: 0.2s;
+}
+nav a .circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 28%;
+    left: 25%;
+    transform: translatex(-50%)scale(1);
+    opacity: 0;
+}
+nav a:nth-child(2) .circle {
+  left: 50%;
+}
+nav a:nth-child(3) .circle {
+  left: 75%;
+}
+nav a .circle.tapped {
+  animation: circletap .3s forwards;
+}
+nav:before {
+    content: '';
+    width: 80px;
+    height: 80px;
+    border-radius: 30% 30% 50% 50%;
+    position: absolute;
+    top: -60%;
+    left: 25%;
+    transform: translatex(-50%);
+    z-index: 1;
+    transition: all 0.3s;
+    transition-delay: 0.2s;
+}
+nav:after {
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    font-size: 26px;
+    z-index: 999;
+    position: absolute;
+    top: -40%;
+    left: 25%;
+    transform: translatex(-50%);
+    background: #fff;
+    border-radius: 50%;
+    padding: 17px;
+    transition: all 0.3s;
+    transition-delay: 0.2s;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+body.home-selected nav .fa-home {
+  opacity: 0;
+}
+body.portfolio-selected nav .fa-briefcase {
+  opacity: 0;
+}
+body.contact-selected nav .fa-envelope {
+  opacity: 0;
+}
+body.home-selected nav:after {
+  content: '\f015';
+}
+body.portfolio-selected nav:before,body.portfolio-selected nav:after {
+  left: 50%;
+}
+body.portfolio-selected nav:after {
+  content: '\f0b1';
+}
+body.contact-selected nav:before {
+  left: 75%;
+}
+body.contact-selected nav:after {
+  content: '\f0e0';
+  left: 75%;
+}
+
+@keyframes circletap {
+  0% {
+    transform: translatex(-50%)scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80 {
+    opacity: 1;
+  }
+  100% {
+    transform: translatex(-50%)scale(1.7);
+    opacity: 0;
+  }
+}
+
+@keyframes iconchange {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #000;
+  }
+}
