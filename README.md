@@ -119,6 +119,7 @@ He has been practicing taekwondo for over nine years and has won several accolad
             <h2>Blog</h2>
             <p>Articles written by Lav about his experiences, tips for balancing multiple interests, and insights into both Taekwondo and technology.</p>
         </section>
+        https://lavtaekwondoplayer.github.io/Lav/
         <section id="contact" class="section">
             <h2>Contact</h2>
             <form>
