@@ -113,7 +113,8 @@ He has been practicing taekwondo for over nine years and has won several accolad
         </section>
         <section id="gallery" class="section">
             <h2>Gallery</h2>
-            <p>Photos and videos of Lav in action, both in Taekwondo and technology.</p>
+            <p>Photos and videos of Lav in action, both in Taekwondo and technology.
+            <source src="https://github.com/Lavtaekwondoplayer/Lav/raw/main/image/Lav%20Kumar%20...mp4" type="video/mp4"></p>
         </section>
         <section id="blog" class="section">
             <h2>Blog</h2>
